@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>尊龙凯时 · 稳定入口简述</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f9fbfc;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2.2rem 1.8rem;
+      box-shadow: 0 8px 28px rgba(13, 115, 119, 0.06);
+    }
+
+    /* 开场短句 – 柔和叙述 */
+    .opening {
+      font-size: 1.35rem;
+      font-weight: 360;
+      letter-spacing: 0.01em;
+      color: #1f5f62;
+      border-left: 4px solid #259b9c;
+      padding-left: 1.2rem;
+      margin-bottom: 2.2rem;
+      line-height: 1.6;
+    }
+
+    .opening em {
+      font-style: normal;
+      color: #0b4b4d;
+      font-weight: 420;
+    }
+
+    /* 承接段落 – 从页面说明切入 */
+    .intro-block {
+      background: #f1f9fa;
+      padding: 1.4rem 1.6rem;
+      border-radius: 20px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 8px rgba(37, 155, 156, 0.08);
+    }
+
+    .intro-block p {
+      margin-bottom: 1rem;
+    }
+
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-block a {
+      color: #1c7a7c;
+      text-decoration: none;
+      font-weight: 520;
+      border-bottom: 1px dashed #7ac0c1;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .intro-block a:hover {
+      border-bottom-style: solid;
+      color: #0b5355;
+    }
+
+    /* 网格卡片 – 特点列表 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.4rem 1rem 1.2rem;
+      box-shadow: 0 4px 12px rgba(13, 92, 94, 0.05);
+      border: 1px solid #e0f0f1;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(20, 120, 122, 0.08);
+      border-color: #a0d4d5;
+    }
+
+    .feature-card h3 {
+      font-size: 1.05rem;
+      font-weight: 540;
+      color: #146b6d;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid #d1eced;
+    }
+
+    .feature-card p {
+      font-size: 0.93rem;
+      color: #2c3f42;
+      line-height: 1.6;
+    }
+
+    .feature-card .small-note {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: #537c7d;
+      border-left: 2px solid #b3d7d8;
+      padding-left: 0.6rem;
+    }
+
+    /* 温和小结 / 场景提示 */
+    .outro-note {
+      margin: 1.6rem 0 2rem;
+      padding: 1.2rem 1.6rem;
+      background: #f4fcfc;
+      border-radius: 24px;
+      border: 1px solid #d2e8e9;
+      font-size: 0.95rem;
+      color: #1e4143;
+    }
+
+    .outro-note strong {
+      color: #106163;
+      font-weight: 560;
+    }
+
+    /* 辅助链接 / 常见疑问摘要  */
+    .faq-mini {
+      margin: 1.8rem 0 0.5rem;
+      background: #ecf6f6;
+      border-radius: 20px;
+      padding: 1rem 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.4rem 1.2rem;
+    }
+
+    .faq-mini span {
+      font-size: 0.86rem;
+      color: #235f61;
+      background: #ffffffbb;
+      padding: 0.15rem 0.7rem;
+      border-radius: 30px;
+      border: 1px solid #c6e0e1;
+    }
+
+    .faq-mini .label {
+      font-weight: 500;
+      color: #0e5a5c;
+      background: transparent;
+      border: none;
+      padding-left: 0;
+      font-size: 0.88rem;
+    }
+
+    hr {
+      margin: 2rem 0 0.6rem;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, #cfdfe0, transparent);
+    }
+
+    .footer-meta {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #567b7c;
+      margin-top: 0.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* 移动端细调 */
+    @media (max-width: 500px) {
+      .container {
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
+      }
+      .opening {
+        font-size: 1.15rem;
+        padding-left: 0.9rem;
+      }
+      .feature-grid {
+        gap: 0.9rem;
+      }
+      .feature-card {
+        padding: 1rem 0.8rem;
+      }
+      .intro-block {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .faq-mini {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 开场短句 -->
+    <div class="opening">
+      <em>页面打开的瞬间</em> —— 一个熟悉的入口，一段安静的叙述。
+    </div>
+
+    <!-- 承接段落：从稳定入口和页面说明展开 -->
+    <div class="intro-block">
+      <p>
+        许多人在使用网络服务时，往往先寻找一个清晰、可靠的起点。这个页面正是基于这样的想法而存在：它不喧哗，也不堆叠复杂的功能，而是作为一处稳定的说明页，为你介绍<span style="color:#11696b; font-weight:430;">尊龙凯时</span>所代表的访问思路。
+      </p>
+      <p>
+        如果你希望直接了解服务本身，可以从这里进入 <a href="https://space-zlg.com">尊龙凯时</a> 的首页，那里提供了更完整的界面与功能。而在这个简短的介绍页里，我们更想表达的是：一个页面应当像一扇门，不紧不慢地推开，让你看见里面的结构。
+      </p>
+    </div>
+
+    <!-- 特点列表：卡片网格，围绕“稳定入口和页面说明” -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>固定地址</h3>
+        <p>使用一致的链接作为访问依据，减少反复寻找的麻烦。网址本身即是标识。</p>
+        <span class="small-note">无需额外记忆</span>
+      </div>
+      <div class="feature-card">
+        <h3>叙述式引导</h3>
+        <p>页面不以弹窗或强制跳转打扰，而是通过文字说明让来访者自然了解用途。</p>
+        <span class="small-note">温和而非催促</span>
+      </div>
+      <div class="feature-card">
+        <h3>轻量结构</h3>
+        <p>信息层次分明：开场、承接、特点、收尾，阅读节奏由你掌握。</p>
+        <span class="small-note">适合快速浏览</span>
+      </div>
+      <div class="feature-card">
+        <h3>场景适配</h3>
+        <p>无论是初次接触还是回访，这个页面都保持一致的说明风格与视觉基调。</p>
+        <span class="small-note">蓝绿点缀 · 卡片友好</span>
+      </div>
+    </div>
+
+    <!-- 温和结尾 / 场景提示 -->
+    <div class="outro-note">
+      <strong>一点说明：</strong> 页面本身不收集信息，也不包含自动跳转。你可以把这里当作一个安静的索引点 —— 通过上文的 <a href="https://space-zlg.com" style="color:#11696b; border-bottom: 1px dotted #75b9ba; text-decoration: none;">尊龙凯时</a> 链接，就能抵达对应的服务界面。其他扩展内容，由你按需探索。
+    </div>
+
+    <!-- FAQ 摘要风格（克制，非完整问答） -->
+    <div class="faq-mini">
+      <span class="label">常见理解方向</span>
+      <span>页面用途</span>
+      <span>稳定入口</span>
+      <span>叙述式设计</span>
+      <span>无诱导</span>
+      <span>移动适配</span>
+    </div>
+
+    <hr>
+
+    <div class="footer-meta">
+      —— 页面索引 · 基于叙述方向 ——
+    </div>
+  </div>
+</body>
+</html>
